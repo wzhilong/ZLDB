@@ -10,4 +10,8 @@
 
 @implementation Test1
 
+- (void)test:(NSString *)name{
+    
+}
+
 @end

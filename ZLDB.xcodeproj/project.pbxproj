@@ -16,6 +16,7 @@
 		1832C8561F4D5E520062E914 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1832C8541F4D5E520062E914 /* LaunchScreen.storyboard */; };
 		1832C8601F4D60A90062E914 /* Test1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832C85F1F4D60A90062E914 /* Test1.m */; };
 		1832C8631F4D60B40062E914 /* Test2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832C8621F4D60B40062E914 /* Test2.m */; };
+		79A46277D90FCAF030C7CB11 /* Pods_ZLDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5EC56F3E74ED2977AD5F06 /* Pods_ZLDB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,9 @@
 		1832C85F1F4D60A90062E914 /* Test1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1.m; sourceTree = "<group>"; };
 		1832C8611F4D60B40062E914 /* Test2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2.h; sourceTree = "<group>"; };
 		1832C8621F4D60B40062E914 /* Test2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2.m; sourceTree = "<group>"; };
+		35F430AE2B010DABF4B158AC /* Pods-ZLDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZLDB/Pods-ZLDB.debug.xcconfig"; sourceTree = "<group>"; };
+		4AC7740A6E8C08478D041305 /* Pods-ZLDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZLDB/Pods-ZLDB.release.xcconfig"; sourceTree = "<group>"; };
+		7E5EC56F3E74ED2977AD5F06 /* Pods_ZLDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZLDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A46277D90FCAF030C7CB11 /* Pods_ZLDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 			children = (
 				1832C8421F4D5E520062E914 /* ZLDB */,
 				1832C8411F4D5E520062E914 /* Products */,
+				26B8081B22870988C8178721 /* Pods */,
+				C7D594B39473A0A440610945 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +107,23 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		26B8081B22870988C8178721 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35F430AE2B010DABF4B158AC /* Pods-ZLDB.debug.xcconfig */,
+				4AC7740A6E8C08478D041305 /* Pods-ZLDB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C7D594B39473A0A440610945 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E5EC56F3E74ED2977AD5F06 /* Pods_ZLDB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1832C85A1F4D5E520062E914 /* Build configuration list for PBXNativeTarget "ZLDB" */;
 			buildPhases = (
+				006EE50828E97ECE524F60F5 /* [CP] Check Pods Manifest.lock */,
 				1832C83C1F4D5E520062E914 /* Sources */,
 				1832C83D1F4D5E520062E914 /* Frameworks */,
 				1832C83E1F4D5E520062E914 /* Resources */,
+				D8F2B7DE7BD4073758E8419F /* [CP] Embed Pods Frameworks */,
+				3E27A229E6A619924E474243 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,6 +193,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		006EE50828E97ECE524F60F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZLDB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E27A229E6A619924E474243 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZLDB/Pods-ZLDB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8F2B7DE7BD4073758E8419F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZLDB/Pods-ZLDB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZLDB/Pods-ZLDB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1832C83C1F4D5E520062E914 /* Sources */ = {
@@ -295,6 +376,7 @@
 		};
 		1832C85B1F4D5E520062E914 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35F430AE2B010DABF4B158AC /* Pods-ZLDB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6U7SM45L7K;
@@ -307,6 +389,7 @@
 		};
 		1832C85C1F4D5E520062E914 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AC7740A6E8C08478D041305 /* Pods-ZLDB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6U7SM45L7K;

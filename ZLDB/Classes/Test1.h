@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+#import "AFNetworking/AFNetworking.h"
+
 @interface Test1 : NSObject
+
+@property(strong,nonatomic) AFNetworkReachabilityManager *manage;
+
+
+- (void)test:(NSString *)name;
 
 @end
