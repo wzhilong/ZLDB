@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "AFNetworking/AFNetworking.h"
+#import "pop/POP.h"
 
 @interface Test1 : NSObject
 
-@property(strong,nonatomic) AFNetworkReachabilityManager *manage;
-
+@property(strong,nonatomic) POPAnimator *pop;
 
 - (void)test:(NSString *)name;
 
