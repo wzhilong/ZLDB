@@ -14,6 +14,8 @@
 		1832C8511F4D5E520062E914 /* ZLDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1832C84F1F4D5E520062E914 /* ZLDB.xcdatamodeld */; };
 		1832C8531F4D5E520062E914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1832C8521F4D5E520062E914 /* Assets.xcassets */; };
 		1832C8561F4D5E520062E914 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1832C8541F4D5E520062E914 /* LaunchScreen.storyboard */; };
+		1832C8601F4D60A90062E914 /* Test1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832C85F1F4D60A90062E914 /* Test1.m */; };
+		1832C8631F4D60B40062E914 /* Test2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832C8621F4D60B40062E914 /* Test2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		1832C8521F4D5E520062E914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1832C8551F4D5E520062E914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1832C8571F4D5E520062E914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1832C85E1F4D60A90062E914 /* Test1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1.h; sourceTree = "<group>"; };
+		1832C85F1F4D60A90062E914 /* Test1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1.m; sourceTree = "<group>"; };
+		1832C8611F4D60B40062E914 /* Test2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2.h; sourceTree = "<group>"; };
+		1832C8621F4D60B40062E914 /* Test2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 		1832C8421F4D5E520062E914 /* ZLDB */ = {
 			isa = PBXGroup;
 			children = (
+				1832C85D1F4D609D0062E914 /* Classes */,
 				1832C8461F4D5E520062E914 /* AppDelegate.h */,
 				1832C8471F4D5E520062E914 /* AppDelegate.m */,
 				1832C8491F4D5E520062E914 /* ViewController.h */,
@@ -80,6 +87,17 @@
 				1832C8441F4D5E520062E914 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1832C85D1F4D609D0062E914 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1832C85E1F4D60A90062E914 /* Test1.h */,
+				1832C85F1F4D60A90062E914 /* Test1.m */,
+				1832C8611F4D60B40062E914 /* Test2.h */,
+				1832C8621F4D60B40062E914 /* Test2.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1832C8631F4D60B40062E914 /* Test2.m in Sources */,
 				1832C84B1F4D5E520062E914 /* ViewController.m in Sources */,
 				1832C8511F4D5E520062E914 /* ZLDB.xcdatamodeld in Sources */,
+				1832C8601F4D60A90062E914 /* Test1.m in Sources */,
 				1832C8481F4D5E520062E914 /* AppDelegate.m in Sources */,
 				1832C8451F4D5E520062E914 /* main.m in Sources */,
 			);
@@ -316,6 +336,7 @@
 				1832C85C1F4D5E520062E914 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
